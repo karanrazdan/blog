@@ -19,12 +19,14 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    redirect_to @post, notice: 'You Shall Not Edit!' if @post.user_id != current_user.id 
   end
 
   # POST /posts
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
 
     respond_to do |format|
       if @post.save
@@ -51,10 +53,12 @@ class PostsController < ApplicationController
     end
   end
 
+
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    @post.destroy
+    redirect_to @post, notice: 'You Shall Not Delete!' if @post.user_id != current_user.id 
+    @post.destroy if @post.user_id == current_user.id
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
@@ -71,4 +75,4 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body, :published)
     end
-end
+  end

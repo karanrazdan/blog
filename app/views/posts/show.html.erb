@@ -1,11 +1,15 @@
 <div class="page-header">
   <%= link_to posts_path, class: 'btn btn-default' do %>
-    <span class="glyphicon glyphicon-list-alt"></span>
-    Back
+  <span class="glyphicon glyphicon-list-alt"></span>
+  Back
   <% end %>
+  <% if user_signed_in? %>
+  <% if current_user.id == @post.user_id %>
   <%= link_to edit_post_path(@post), class: 'btn btn-primary' do %>
-    <span class="glyphicon glyphicon-pencil"></span>
-    Edit
+  <span class="glyphicon glyphicon-pencil"></span>
+  Edit
+  <% end %>
+  <% end %>
   <% end %>
   <h1>Show post</h1>
 </div>
