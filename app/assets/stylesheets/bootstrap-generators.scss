@@ -2,9 +2,79 @@
 @import "bootstrap-sprockets.scss";
 @import "bootstrap.scss";
 
+
+ 
+
+.blog-name {
+  
+  text-align: center;
+  color: #F2F4F5;
+
+}
+
+.welcome {
+  
+  color:  #D3D1CF;
+  border: 2px;
+  
+}
+
+.new-post {
+  
+  color: #E1E4E7;
+}
+
+
+.form-group {
+  
+  color: #E1E4E7;
+}
+
+.show-post {
+  
+  color: #E1E4E7;
+}
+
+.dl-horizontal {
+  
+   color: #E1E4E7;
+}
+
+.edit-post {
+  
+  color: #E1E4E7;
+}
+
+a {
+  font-size: 16px;
+}
+.post {
+
+  a:link { color: #AC8362 } /* unvisited links */
+  a:visited { color: #AC8362 } /* visited links */
+
+  a:active { color: #AC8362 }
+  border-radius: 3%;
+  padding: 10px 10px 10px 10px;   
+  background-color: rgba(152, 143, 140,0.7);
+  font-size: 24px;
+  color: #E1E4E7;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+
+
 body {
   padding-top: $navbar-height + 10px;
   background-color: #95a5a6;
+  background: url("https://static.pexels.com/photos/7107/notebook-hero-workspace-minimal.jpg") no-repeat top fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px;
+    
 }
 
 .page-header {
@@ -15,6 +85,8 @@ body {
   a.btn + a.btn {
     margin-right: 8px;
   }
+
+
 }
 
 input[type="radio"], input[type="checkbox"] {
@@ -24,14 +96,11 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .navbar {
+  width: 100%;
   position: relative;
   z-index: 1;
-  margin: 40px 70px 0 70px;
+  margin: 80px 0 0 0;
 }
 
-.page-header {
-  
-  margin: 50px 0 0 0;
-}
 
 
