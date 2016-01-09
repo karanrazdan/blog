@@ -8,7 +8,59 @@
 .blog-name {
   
   text-align: center;
-  color: white;
+  color: #F2F4F5;
+
+}
+
+.welcome {
+  
+  color:  #D3D1CF;
+  border: 2px;
+  
+}
+
+.new-post {
+  
+  color: #E1E4E7;
+}
+
+
+.form-group {
+  
+  color: #E1E4E7;
+}
+
+.show-post {
+  
+  color: #E1E4E7;
+}
+
+.dl-horizontal {
+  
+   color: #E1E4E7;
+}
+
+.edit-post {
+  
+  color: #E1E4E7;
+}
+
+a {
+  font-size: 16px;
+}
+.post {
+
+  a:link { color: #AC8362 } /* unvisited links */
+  a:visited { color: #AC8362 } /* visited links */
+
+  a:active { color: #AC8362 }
+  border-radius: 3%;
+  padding: 10px 10px 10px 10px;   
+  background-color: rgba(152, 143, 140,0.7);
+  font-size: 24px;
+  color: #E1E4E7;
+  margin-top: 30px;
+  margin-bottom: 30px;
 
 }
 

@@ -3,9 +3,34 @@
   <span class="glyphicon glyphicon-plus"></span>
   New Post
   <% end %>
-  <h1>Welcome</h1>
+  <h1 class="welcome">Welcome</h1>
 </div>
 
+<div class="container">
+    <%= content_tag_for(:div,@posts) do |post| %>
+    <div class="post">
+      <%= post.title %>
+      <br><br>
+      <%= post.body %>
+   <!--   <%= post.published %> -->
+    <!--<%= link_to 'Read full', post %> -->
+      <% if user_signed_in? %>
+      <% if current_user.id == post.user_id %><%= link_to 'Edit', edit_post_path(post) %> |
+      <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+      <% end %>
+      </div>
+      <% end %>
+      
+
+
+
+
+
+
+</div>
+
+<!--
 <div class="table-responsive">
   <table class="table table-striped table-bordered table-hover">
     <thead>
@@ -31,4 +56,5 @@
       <% end %>
     </tbody>
   </table>
-</div>
+
+</div>-->
